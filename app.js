@@ -1,42 +1,38 @@
 const express = require('express');
+const session = require('express-session');
 const path = require('path');
-const mysql = require('mysql2');
+const passport = require('passport');
 const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
-const app=express();
-
-app.set('view engine', 'ejs'); // Establece EJS como motor de plantillas
-app.set('views', path.join(__dirname, 'views')); // Carpeta para tus plantillas
-
+const port = process.env.PORT || 3000;
 
 dotenv.config();
 
-app.use(bodyParser.json());
+const app=express();
 
-// Importar las rutas
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
+
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: true,
+    saveUninitialized: false,
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+
 const mainRoutes = require('./routes/mainRoutes');
 
-// Usar las rutas
 app.use('/', mainRoutes);
 
-const db = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
-});
-
-
-
-db.connect((err) => {
-    if (err) {
-        console.error('Error connecting to database:', err);
-        return;
-    }
-    console.log('Connected to database.');
-});
-
-// Inicia el servidor
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Servidor ejecutándose en el puerto 3000');
 });

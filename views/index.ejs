@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title> <!-- Usar la variable title -->
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<h1>Bienvenido a <%= title %></h1>
-<p>Esta es la página de inicio.</p>
+<div class="container">
+    <h1 class="text-center my-4">Bienvenido a <%= title %></h1>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <p class="text-center">Esta es la página de inicio de Mi Drive.</p>
+            <a href="#" class="btn btn-primary">Comenzar</a>
+        </div>
+    </div>
+</div>
+
+<script src="/bootstrap/js/bootstrap.bundle.js"></script>
 </body>
 </html>
