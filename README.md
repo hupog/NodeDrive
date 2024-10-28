@@ -25,6 +25,7 @@
 - MySQL
 - EJS
 - dotenv
+- Bootstap
 
 ## Requisitos
 
@@ -43,13 +44,20 @@ Antes de comenzar, asegúrate de tener instalados:
    ```bash
    git clone https://github.com/tu_usuario/mydrive.git
    ```
-
-   O si tienes nodemon instalado:
-
+   
+   Y una vez descargado, con PowerShell o cualquiera linea de comando, sitúate en el directorio del proyecto y escribe:
+   
    ```bash
-   nodemon app.js
-   ```
-2. **Accede a la aplicación**
+   npm install 
+    ```
+2. **Crea el esquema de la BD**
+
+   En esta guía se utilizará WAMP server para ejecutarlo en local, junto con MySQL.
+
+   Abrimos el archivo db_script más actualizado (actualmente 1.0) y lo ejecutamos como querry en nuestra base de datos. Esto creará un nuevo esquema con todas las características necesarias.
+
+
+3. **Accede a la aplicación**
    
    Abre tu navegador web y navega a http://localhost:3000 para acceder a la aplicación.
 
