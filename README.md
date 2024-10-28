@@ -23,7 +23,7 @@ HupoDrive es una aplicación creada para aprender Node.js, almacena y gestionar 
 - Node.js
 - Express
 - MySQL
-- EJS (si decides usar un motor de plantillas)
+- EJS
 - dotenv
 
 ## Requisitos
