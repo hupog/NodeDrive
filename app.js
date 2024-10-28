@@ -1,7 +1,9 @@
 const express = require('express');
+const path = require('path');
 const mysql = require('mysql2');
 const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
+const app=express();
 
 app.set('view engine', 'ejs'); // Establece EJS como motor de plantillas
 app.set('views', path.join(__dirname, 'views')); // Carpeta para tus plantillas
@@ -9,8 +11,13 @@ app.set('views', path.join(__dirname, 'views')); // Carpeta para tus plantillas
 
 dotenv.config();
 
-const app = express();
 app.use(bodyParser.json());
+
+// Importar las rutas
+const mainRoutes = require('./routes/mainRoutes');
+
+// Usar las rutas
+app.use('/', mainRoutes);
 
 const db = mysql.createConnection({
     host: process.env.DB_HOST,
@@ -18,6 +25,8 @@ const db = mysql.createConnection({
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME
 });
+
+
 
 db.connect((err) => {
     if (err) {

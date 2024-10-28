@@ -1,6 +1,6 @@
-# HupoDrive
+# NodeDrive
 
-HupoDrive es una aplicación creada para aprender Node.js, almacena y gestionar archivos en un "drive" casero. Utiliza una base de datos MySQL para almacenar la información de los archivos y usuarios.
+   NodeDrive es una aplicación creada para aprender Node.js, almacena y gestionar archivos en un "drive" casero. Utiliza una base de datos MySQL para almacenar la información de los archivos y usuarios.
 
 ## Tabla de Contenidos
 
@@ -23,7 +23,7 @@ HupoDrive es una aplicación creada para aprender Node.js, almacena y gestionar 
 - Node.js
 - Express
 - MySQL
-- EJS (si decides usar un motor de plantillas)
+- EJS
 - dotenv
 
 ## Requisitos
@@ -42,3 +42,30 @@ Antes de comenzar, asegúrate de tener instalados:
 
    ```bash
    git clone https://github.com/tu_usuario/mydrive.git
+   ```
+
+   O si tienes nodemon instalado:
+
+   ```bash
+   nodemon app.js
+   ```
+2. **Accede a la aplicación**
+   
+   Abre tu navegador web y navega a http://localhost:3000 para acceder a la aplicación.
+
+
+3. **Interactúa con la aplicación**
+
+   Usa la interfaz web para subir, ver, y gestionar archivos y usuarios. Puedes navegar a diferentes secciones de la aplicación según sea necesario.
+
+## Estructura del Proyecto de MyDrive
+
+   A continuación se muestra la estructura de carpetas y archivos del proyecto:
+   
+   ```less
+   mydrive 
+  ├──
+   ```
+
+
+## Descripción de los Archivos y Carpetas
