@@ -1,4 +1,4 @@
-# MyDrive
+# HupoDrive
 
 HupoDrive es una aplicación creada para aprender Node.js, almacena y gestionar archivos en un "drive" casero. Utiliza una base de datos MySQL para almacenar la información de los archivos y usuarios.
 
