@@ -1,29 +1,33 @@
 const LocalStrategy = require('passport-local').Strategy;
-const db = require('../db'); // Asegúrate de que esta ruta sea correcta
+const bcrypt = require('bcrypt');
+const db = require('./db');
+
 
 module.exports = function(passport) {
     passport.use(new LocalStrategy((username, password, done) => {
-        // Aquí debes buscar al usuario en tu base de datos
         db.query('SELECT * FROM users WHERE user_name = ?', [username], (err, results) => {
             if (err) return done(err);
-            if (!results.length) return done(null, false); // Usuario no encontrado
+            if (!results.length) return done(null, false);
 
             const user = results[0];
-            // Aquí deberías verificar la contraseña (usando bcrypt, por ejemplo)
-            if (user.user_passwd !== password) return done(null, false); // Contraseña incorrecta
 
-            return done(null, user); // Autenticación exitosa
+            bcrypt.compare(password, user.user_passwd, (err, isMatch) => {
+                if (err) return done(err);
+                if (!isMatch) return done(null, false);
+
+                return done(null, user);
+            });
         });
     }));
 
     passport.serializeUser((user, done) => {
-        done(null, user.user_id); // Guardar el ID del usuario en la sesión
+        done(null, user.user_id);
     });
 
     passport.deserializeUser((id, done) => {
         db.query('SELECT * FROM users WHERE user_id = ?', [id], (err, results) => {
             if (err) return done(err);
-            done(null, results[0]); // Devolver el usuario encontrado
+            done(null, results[0]);
         });
     });
 };
