@@ -76,4 +76,16 @@ Antes de comenzar, asegúrate de tener instalados:
    ```
 
 
-## Descripción de los Archivos y Carpetas
+## Contribución
+
+   Las contribuciones son bienvenidas. Si deseas contribuir, por favor sigue estos pasos:
+
+   1. Haz un fork del repositorio.
+   2. Crea una nueva rama (git checkout -b feature/nueva-caracteristica).
+   3. Realiza tus cambios y confirma (git commit -m 'Añadir nueva característica').
+   4. Envía tus cambios (git push origin feature/nueva-caracteristica).
+   5. Crea un Pull Request.
+
+## Licencia
+
+   Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
