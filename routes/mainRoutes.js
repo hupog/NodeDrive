@@ -27,7 +27,9 @@ router.get('/logout', (req, res) => {
 
 router.get('/', ensureAuthenticated, (req, res) => {
     res.render('index',
-        { title: 'NodeDrive' });
+        {
+            title: 'NodeDrive',
+        });
 });
 
 module.exports = router;
