@@ -16,7 +16,7 @@
 
 - Almacenar archivos con nombre y datos binarios.
 - Gestión de usuarios con permisos y capacidad de almacenamiento.
-- Rutas para realizar operaciones CRUD sobre archivos y usuarios.
+- AMPLIANDO
 
 ## Tecnologías
 
@@ -76,16 +76,27 @@ Antes de comenzar, asegúrate de tener instalados:
    ```
 
 
-## Contribución
+## Contribuciones
 
-   Las contribuciones son bienvenidas. Si deseas contribuir, por favor sigue estos pasos:
+¡Las contribuciones son muy bienvenidas! Si deseas ayudar a mejorar este proyecto, sigue estos sencillos pasos:
 
-   1. Haz un fork del repositorio.
-   2. Crea una nueva rama (git checkout -b feature/nueva-caracteristica).
-   3. Realiza tus cambios y confirma (git commit -m 'Añadir nueva característica').
-   4. Envía tus cambios (git push origin feature/nueva-caracteristica).
-   5. Crea un Pull Request.
+1. **Haz un fork del repositorio:** Crea tu propia copia del proyecto.
+2. **Crea una nueva rama:**
+   ```bash
+   git checkout -b feature/nueva-caracteristica
+   ```
+3. **Realiza tus cambios:** Haz las modificaciones necesarias en el código.
+4. **Confirma tus cambios:**
+   ```bash
+   git commit -m 'Añadir nueva característica'
+   ```
+5. **Envía tus cambios**
+   ```bash
+   git push origin feature/nueva-caracteristica
+   ```
+6. **Crea tu pull request**
 
 ## Licencia
 
-   Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+Este proyecto está bajo la **Licencia MIT**.  
+Para más detalles, consulta el archivo [LICENSE](./LICENSE).
