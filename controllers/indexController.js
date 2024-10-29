@@ -1,6 +1,6 @@
 const indexController = {
     getIndex: (req, res) => {
-        res.render('index');
+        res.render('index', { title: "NodeDrive"});
     },
 };
 

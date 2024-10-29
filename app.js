@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 
 dotenv.config();
 
-const app=express();
+const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -29,11 +29,14 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use((req, res, next) => {
+    res.locals.isAuthenticated = req.isAuthenticated();
+    next();
+});
 
 const mainRoutes = require('./routes/mainRoutes');
 app.use('/', mainRoutes);
 app.use('/info', mainRoutes);
-
 
 app.listen(port, () => {
     console.log('Servidor ejecutándose en el puerto 3000');

@@ -13,6 +13,11 @@
 
 .navbar_style {
     background-color: var(--rose-taupe);
+    opacity: 0.9;
+    border-radius: 30px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 1rem;
+    margin: 1rem 2rem;
 }
 
 .navbar .nav-link {
@@ -25,31 +30,33 @@
 }
 
 .login_button {
-    background-color: var(--rose-taupe);
+    background-color: var(--dun);
     color: #000;
-    border: none;
     border-radius: 20px;
+    border: none;
     transition: background-color 0.3s ease;
 }
 
 .login_button:hover {
-    color: #000;
-    background-color: var(--dun);
-}
-
-.register_button {
-    background-color: var(--dun);
-    color: #000;
-    border-radius: 20px;
-    border: none;
-    transition: background-color 0.3s ease;
-}
-
-.register_button:hover {
     color: #000;
     background-color: var(--rose-taupe);
 }
 
 .background{
     background-color: var(--dun);
+}
+
+.custom_input {
+    background: var(--cinereous);
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.custom_input:focus {
+    background: #95897d;
+    outline: none;
+    box-shadow: none;
 }

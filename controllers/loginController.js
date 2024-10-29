@@ -8,37 +8,37 @@ const loginController = {
     postLogin: (req, res, next) => {
         passport.authenticate('local', (err, user, info) => {
             if (err) {
-                return next(err); // Manejo de errores
+                return next(err);
             }
             if (!user) {
-                return res.redirect('/login'); // Redirige si no hay usuario
+                return res.redirect('/login');
             }
             req.logIn(user, (err) => {
                 if (err) {
-                    return next(err); // Manejo de errores
+                    return next(err);
                 }
-                return res.redirect('/'); // Redirige a la página principal si la autenticación es exitosa
+                return res.redirect('/');
             });
-        })(req, res, next); // Llama a la función authenticate
+        })(req, res, next);
     },
 
     getLogout: (req, res) => {
         req.logout(err => {
             if (err) {
-                return next(err); // Manejo de errores
+                return next(err);
             }
-            res.redirect('/login'); // Redirige a la página de login después de cerrar sesión
+            res.redirect('/login');
         });
     },
 
     postLogout: (req, res, next) => {
         req.logout(err => {
             if (err) {
-                return next(err); // Manejo de errores
+                return next(err);
             }
-            res.redirect('/'); // Redirige a la página de login después de cerrar sesión
+            res.redirect('/');
         });
     }
 };
 
-module.exports = loginController; // Asegúrate de que estás exportando correctamente
+module.exports = loginController;
