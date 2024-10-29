@@ -1,0 +1,55 @@
+:root {
+    --old-rose: #cc8b86ff;
+    --linen: #f9eae1ff;
+    --rose-taupe: #7d4f50ff;
+    --dun: #d1be9cff;
+    --cinereous: #aa998fff;
+}
+
+.navbar-brand img {
+    width: 50%;
+    height: auto;
+}
+
+.navbar_style {
+    background-color: var(--rose-taupe);
+}
+
+.navbar .nav-link {
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--old-rose);
+}
+
+.login_button {
+    background-color: var(--rose-taupe);
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.login_button:hover {
+    color: #000;
+    background-color: var(--dun);
+}
+
+.register_button {
+    background-color: var(--dun);
+    color: #000;
+    border-radius: 20px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.register_button:hover {
+    color: #000;
+    background-color: var(--rose-taupe);
+}
+
+.background{
+    background-color: var(--dun);
+}

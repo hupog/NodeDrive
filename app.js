@@ -31,8 +31,9 @@ app.use(passport.session());
 
 
 const mainRoutes = require('./routes/mainRoutes');
-
 app.use('/', mainRoutes);
+app.use('/info', mainRoutes);
+
 
 app.listen(port, () => {
     console.log('Servidor ejecutándose en el puerto 3000');
