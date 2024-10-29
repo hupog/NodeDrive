@@ -99,4 +99,4 @@ Antes de comenzar, asegúrate de tener instalados:
 ## Licencia
 
 Este proyecto está bajo la **Licencia MIT**.  
-Para más detalles, consulta el archivo [LICENSE](./LICENSE).
+Para más detalles, consulta el archivo [LICENSE](./LICENSE.md).
